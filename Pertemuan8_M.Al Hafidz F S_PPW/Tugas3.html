@@ -1,0 +1,189 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dashboard Nilai Mahasiswa</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <style>
+        body {
+            background-color: #f8f9fa;
+        }
+    </style>
+</head>
+<body>
+
+<div class="container py-5">
+    
+    <div class="card mb-4 shadow-sm border-0">
+        <div class="card-body p-4">
+            <div class="d-flex align-items-center flex-wrap gap-3">
+                <img src="https://ui-avatars.com/api/?name=Al+Hafidz&background=0D8ABC&color=fff&size=100" alt="Foto Profil" class="rounded-circle shadow-sm">
+                <div>
+                    <h3 class="fw-bold mb-1">M. Al Hafidz F S</h3>
+                    <p class="text-muted mb-2">25/556523/SV/25949 | D-IV Teknologi Rekayasa Perangkat Lunak</p>
+                    <span class="badge bg-success px-3 py-2 rounded-pill">Mahasiswa Aktif</span>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="row mb-4 g-3">
+        <div class="col-md-4">
+            <div class="card shadow-sm border-0 h-100">
+                <div class="card-body text-center d-flex flex-column justify-content-center">
+                    <div class="display-5 mb-2">📚</div>
+                    <h6 class="card-title text-muted text-uppercase">Total SKS Diambil</h6>
+                    <h2 class="fw-bold text-dark mb-0">24</h2>
+                </div>
+            </div>
+        </div>
+        <div class="col-md-4">
+            <div class="card shadow-sm border-0 h-100">
+                <div class="card-body text-center d-flex flex-column justify-content-center">
+                    <div class="display-5 mb-2">🏆</div>
+                    <h6 class="card-title text-muted text-uppercase">IPK Saat Ini</h6>
+                    <h2 class="fw-bold text-primary mb-0">3.85</h2>
+                </div>
+            </div>
+        </div>
+        <div class="col-md-4">
+            <div class="card shadow-sm border-0 h-100">
+                <div class="card-body text-center d-flex flex-column justify-content-center">
+                    <div class="display-5 mb-2">✅</div>
+                    <h6 class="card-title text-muted text-uppercase">Mata Kuliah Lulus</h6>
+                    <h2 class="fw-bold text-success mb-0">8</h2>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="card shadow-sm border-0">
+        <div class="card-header bg-white py-3">
+            <h5 class="mb-0 fw-bold">Daftar Mata Kuliah</h5>
+        </div>
+        <div class="card-body p-0">
+            <div class="table-responsive">
+                <table class="table table-hover align-middle mb-0">
+                    <thead class="table-light">
+                        <tr>
+                            <th class="text-center px-3">No</th>
+                            <th>Mata Kuliah</th>
+                            <th class="text-center">SKS</th>
+                            <th class="text-center">Nilai Huruf</th>
+                            <th class="text-center">Nilai Angka</th>
+                            <th class="text-center">Aksi</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td class="text-center px-3">1</td>
+                            <td class="fw-medium">Basis Data</td>
+                            <td class="text-center">3</td>
+                            <td class="text-center"><span class="badge bg-success w-50">A</span></td>
+                            <td class="text-center">4.00</td>
+                            <td class="text-center">
+                                <button class="btn btn-sm btn-outline-secondary" data-bs-toggle="modal" data-bs-target="#modalDB">Detail</button>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td class="text-center px-3">2</td>
+                            <td class="fw-medium">Aljabar Vektor dan Matriks</td>
+                            <td class="text-center">2</td>
+                            <td class="text-center"><span class="badge bg-success w-50">A-</span></td>
+                            <td class="text-center">3.75</td>
+                            <td class="text-center">
+                                <button class="btn btn-sm btn-outline-secondary" data-bs-toggle="modal" data-bs-target="#modalAljabar">Detail</button>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td class="text-center px-3">3</td>
+                            <td class="fw-medium">Pemrograman Web 1</td>
+                            <td class="text-center">3</td>
+                            <td class="text-center"><span class="badge bg-primary w-50">B</span></td>
+                            <td class="text-center">3.00</td>
+                            <td class="text-center">
+                                <button class="btn btn-sm btn-outline-secondary" data-bs-toggle="modal" data-bs-target="#modalWeb">Detail</button>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td class="text-center px-3">4</td>
+                            <td class="fw-medium">Sistem Operasi</td>
+                            <td class="text-center">2</td>
+                            <td class="text-center"><span class="badge bg-warning text-dark w-50">C</span></td>
+                            <td class="text-center">2.00</td>
+                            <td class="text-center">
+                                <button class="btn btn-sm btn-outline-secondary" data-bs-toggle="modal" data-bs-target="#modalOS">Detail</button>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td class="text-center px-3">5</td>
+                            <td class="fw-medium">Fisika Dasar</td>
+                            <td class="text-center">2</td>
+                            <td class="text-center"><span class="badge bg-danger w-50">D</span></td>
+                            <td class="text-center">1.00</td>
+                            <td class="text-center">
+                                <button class="btn btn-sm btn-outline-secondary" data-bs-toggle="modal" data-bs-target="#modalFisika">Detail</button>
+                            </td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="modal fade" id="modalDB" tabindex="-1" aria-labelledby="modalDBLabel" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered">
+        <div class="modal-content">
+            <div class="modal-header bg-light">
+                <h5 class="modal-title fw-bold" id="modalDBLabel">Detail Mata Kuliah</h5>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body">
+                <p><strong>Nama Mata Kuliah:</strong> Basis Data</p>
+                <p><strong>Dosen Pengampu:</strong> Dr. R. Database, M.Kom.</p>
+                <p><strong>Semester:</strong> Genap 2025/2026</p>
+                <p class="mb-0"><strong>Deskripsi:</strong> Pembelajaran perancangan *database*, instalasi Oracle Database Express Edition (XE), dan *query* SQL terstruktur.</p>
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Tutup</button>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="modal fade" id="modalAljabar" tabindex="-1" aria-labelledby="modalAljabarLabel" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered">
+        <div class="modal-content">
+            <div class="modal-header bg-light">
+                <h5 class="modal-title fw-bold" id="modalAljabarLabel">Detail Mata Kuliah</h5>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body">
+                <p><strong>Nama Mata Kuliah:</strong> Aljabar Vektor dan Matriks</p>
+                <p><strong>Dosen Pengampu:</strong> Prof. Linear Algebra, M.Sc.</p>
+                <p><strong>Semester:</strong> Genap 2025/2026</p>
+                <p class="mb-0"><strong>Deskripsi:</strong> Mempelajari determinan, operasi matriks, Aturan Cramer, dan ekspansi kofaktor untuk pemecahan masalah algoritma.</p>
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Tutup</button>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="modal fade" id="modalWeb" tabindex="-1" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered"><div class="modal-content"><div class="modal-header"><h5 class="modal-title">Pemrograman Web 1</h5><button type="button" class="btn-close" data-bs-dismiss="modal"></button></div><div class="modal-body"><p>Fokus pada HTML, CSS, dan framework Bootstrap 5.</p></div></div></div>
+</div>
+<div class="modal fade" id="modalOS" tabindex="-1" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered"><div class="modal-content"><div class="modal-header"><h5 class="modal-title">Sistem Operasi</h5><button type="button" class="btn-close" data-bs-dismiss="modal"></button></div><div class="modal-body"><p>Manajemen memori dan arsitektur sistem operasi.</p></div></div></div>
+</div>
+<div class="modal fade" id="modalFisika" tabindex="-1" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered"><div class="modal-content"><div class="modal-header"><h5 class="modal-title">Fisika Dasar</h5><button type="button" class="btn-close" data-bs-dismiss="modal"></button></div><div class="modal-body"><p>Konsep dasar fisika mekanika dan elektromagnetik.</p></div></div></div>
+</div>
+
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+
+</body>
+</html>
