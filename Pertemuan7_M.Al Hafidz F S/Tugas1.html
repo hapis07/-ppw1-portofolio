@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Profile Card</title>
+    <style>
+        body {
+            height: 2000px;
+            margin: 0;
+            background-color: black;
+        }
+
+        h1{
+            text-align: center;
+        }
+        header{
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            background-color: antiquewhite;
+            padding: 0px 20px;
+            color: blue;
+        }
+        ul{
+            display: flex;
+            gap: 20px;
+        }
+        li{
+            list-style-type: none;
+        }
+        .container{
+            display: flex;
+            justify-content: center;
+            margin-top: 70px;
+        }
+        .profile-card{
+            position: relative;
+            height: 350px ;
+            width:280px ;
+            background-color: antiquewhite ;
+            border-radius: 14px;
+            box-shadow: 0 8px 16px rgba(0,0,0,0.1);
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            border: 1px solid #ddd;
+        }
+        .status-badge{
+            position: absolute;
+            top: 15px;
+            right: 15px;
+            background-color: #e8f5e9;
+            color: #2e7d32;
+            padding: 5px 10px;
+            border-radius: 20px;
+            font-size: 12px;
+            font-weight: bold;
+        }
+        .avatar{
+             width: 100px;
+            height: 100px;
+            border-radius: 50%;
+            margin-bottom: 20px;
+        }
+        .name{
+            font-size: 15px;
+            font-weight: bold;
+            margin-top: -10px;
+        }
+        .role{
+            text-align: justify;
+            padding: 0px 10px;
+            margin-top: 10px;
+        }
+        .back-to-top {
+            position: fixed;
+            bottom: 30px;
+            right: 30px;
+            background-color: #3498db;
+            color: white;
+            padding: 12px 20px;
+            border-radius: 50px;
+            text-decoration: none;
+            font-size: 14px;
+            font-weight: bold;
+            box-shadow: 0 4px 8px rgba(0,0,0,0.3);
+            z-index: 1000; 
+            transition: background-color 0.3s ease;
+        }
+
+        .back-to-top:hover {
+            background-color: #2980b9;
+        }
+    </style>
+</head>
+
+<body>
+    <header>
+        <h1>My Profile Card Website</h1>    
+        <nav>
+            <ul>
+                <li><a href="responsive.html">Home</a></li>
+                <li><a href="about2.html">About</a></li>
+                <li><a href="contact2.html">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <div class="container">
+        <div class="profile-card">
+            
+            <div class="status-badge">Online 🟢</div>
+            
+            <img src="https://img.rid.co.id/pp/JB96mSFTy2FrYQS4jUqI.webp" class="avatar" alt="Avatar Frank Ocean">
+            <div class="name">Frank Ocean</div>
+            <div class="role">Frank Ocean adalah penyanyi, penulis lagu, dan produser asal Amerika Serikat. Dia dikenal karena gaya musiknya yang menggabungkan R&B, hip-hop, dan pop. Album debutnya, "Channel Orange," dirilis pada 2012, diikuti oleh "Blonde" pada 2016, yang mendapat pengakuan luas.</div>
+        </div>
+    </div>
+
+    <a href="#" class="back-to-top">↑ Back to Top</a>
+</body>
+</html>

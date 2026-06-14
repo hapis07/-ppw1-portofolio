@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Tugas Flexbox Paling Simpel</title>
+    <style>
+        header{
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 0px 10px;
+            background-color: antiquewhite;
+        }
+        ul{
+            display: flex;
+            gap: 20px;
+        }
+        li{
+            list-style-type: none;
+        }
+        .hero{
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            gap: 80px;
+            margin-left: 30px;
+            margin-right: 30px;
+        }
+        .hero-kiri{
+            text-align: justify;
+        h2{
+            text-align: center;
+        }
+        }
+        img{
+            border-radius: 50%;
+            margin-top: 50px;
+        }
+        .grid-kartu{
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 20px;
+        }
+        .kartu{
+            margin-top: 50px ;
+            background-color: blanchedalmond   ;
+            padding: 15px 0px;
+            width: 30.8%;
+            text-align: center;
+        }
+        footer{
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 20px 10px; 
+            background-color: antiquewhite;
+            gap: 20px; 
+            margin-top: 50px; 
+        }
+        @media (max-width: 768px) {
+            .hero, footer {
+                flex-direction: column; 
+                gap: 20px;
+            }
+            .grid-kartu {
+                flex-direction: column; 
+            }
+            .kartu {
+                width: 100%; 
+            }
+        }
+        
+    </style>
+</head>
+<body>
+     <header>
+        <h1>Logo</h1>    
+        <nav>
+            <ul>
+                <li><a href="link.html">link</a></li>
+                <li><a href="link.html">link</a></li>
+                <li><a href="link.html">link</a></li>
+            </ul>
+        </nav>
+    </header>
+   
+    <div class="hero">
+        <div class="hero-kiri">
+            <h2>Frank Ocean</h2>
+            <p>Frank Ocean adalah penyanyi, penulis lagu, dan produser asal Amerika Serikat. Dia dikenal karena gaya musiknya yang menggabungkan R&B, hip-hop, dan pop. Album debutnya, "Channel Orange," dirilis pada 2012, diikuti oleh "Blonde" pada 2016, yang mendapat pengakuan luas.
+    
+        </div>
+        <div class="hero-kanan">
+            <img src="https://img.rid.co.id/pp/JB96mSFTy2FrYQS4jUqI.webp" class="avatar" alt="Avatar Frank Ocean">
+        </div>
+    </div>
+
+    <div class="grid-kartu">
+        <div class="kartu">Kartu 1</div>
+        <div class="kartu">Kartu 2</div>
+        <div class="kartu">Kartu 3</div>
+    </div>
+
+    <footer>
+        <div class="kolom-footer">Kolom 1</div>
+        <div class="kolom-footer">Kolom 2</div>
+        <div class="kolom-footer">Kolom 3</div>
+    </footer>
+
+</body>
+</html>
