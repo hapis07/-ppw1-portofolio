@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <title>Tugas 2 - Form Pendataan PPW1</title>
+
+    <!-- Bootstrap untuk tabel -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css">
+
+    <style>
+        body { font-family: Arial; padding: 30px; }
+        h2 { text-align: center; }
+    </style>
+</head>
+<body>
+
+    <h2>Form Pendataan Mahasiswa PPW1</h2>
+
+    <!-- Area hasil akan diisi JavaScript -->
+    <div id="hasil" class="container mt-4"></div>
+
+    <script>
+        // confirm() = kotak dialog OK / Cancel
+        // OK     => true
+        // Cancel => false
+        var jawaban = confirm("Apakah Anda mahasiswa PPW1?");
+
+        if (jawaban == true) {
+
+            // prompt() = kotak input teks
+            var nama     = prompt("Masukkan Nama Anda:");
+            var nim      = prompt("Masukkan NIM Anda:");
+            var angkatan = prompt("Masukkan Angkatan Anda (contoh: 2025):");
+
+            // Hitung tahun lulus (angkatan + 4 tahun)
+            var tahunSekarang = new Date().getFullYear();
+            var tahunLulus    = parseInt(angkatan) + 4;
+            var sisaTahun     = tahunLulus - tahunSekarang;
+
+            var keteranganLulus = "";
+            if (sisaTahun > 0) {
+                keteranganLulus = sisaTahun + " tahun lagi";
+            } else if (sisaTahun == 0) {
+                keteranganLulus = "Tahun ini!";
+            } else {
+                keteranganLulus = "Sudah lulus " + Math.abs(sisaTahun) + " tahun lalu";
+            }
+
+            // Cek NIM genap atau ganjil pakai operator % (modulus)
+            // % = sisa hasil bagi
+            // 12345 % 2 = 1 → ganjil
+            // 12344 % 2 = 0 → genap
+            var nimAngka = parseInt(nim);
+            var sisaBagi = nimAngka % 2;
+            var jenisNIM = "";
+
+            if (sisaBagi == 0) {
+                jenisNIM = "Genap";
+            } else {
+                jenisNIM = "Ganjil";
+            }
+
+            // Tampilkan ke tabel Bootstrap pakai innerHTML
+            document.getElementById("hasil").innerHTML = `
+                <h4 class="text-center">Data Mahasiswa PPW1</h4>
+                <table class="table table-bordered table-striped">
+                    <thead class="table-primary">
+                        <tr>
+                            <th>Keterangan</th>
+                            <th>Data</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>Nama</td>
+                            <td>${nama}</td>
+                        </tr>
+                        <tr>
+                            <td>NIM</td>
+                            <td>${nim}</td>
+                        </tr>
+                        <tr>
+                            <td>Angkatan</td>
+                            <td>${angkatan}</td>
+                        </tr>
+                        <tr>
+                            <td>Tahun Lulus (prediksi)</td>
+                            <td>${tahunLulus} (${keteranganLulus})</td>
+                        </tr>
+                        <tr>
+                            <td>NIM Genap/Ganjil</td>
+                            <td>${jenisNIM} (NIM % 2 = ${sisaBagi})</td>
+                        </tr>
+                    </tbody>
+                </table>
+            `;
+
+            // Tampil juga di console
+            console.log("Nama:", nama);
+            console.log("NIM:", nim, "=>", jenisNIM);
+            console.log("Lulus:", tahunLulus, "|", keteranganLulus);
+
+        } else {
+
+            // Jika TIDAK, tampilkan pesan penolakan
+            document.getElementById("hasil").innerHTML = `
+                <div style="text-align:center; color:red; border: 1px solid red; padding: 20px;">
+                    <h3>Akses Ditolak!</h3>
+                    <p>Halaman ini khusus mahasiswa <strong>PPW1</strong> saja.</p>
+                    <p style="font-size:40px;">🚪🏃‍♂️💨</p>
+                    <p><em>"Tak ada rotan, akar pun jadi. Tak masuk PPW1, pulang saja diri." 😂</em></p>
+                </div>
+            `;
+                var jawaban = confirm("Apakah Anda mahasiswa PPW1?");
+
+
+            console.log("Bukan mahasiswa PPW1. Akses ditolak.");
+        }
+    </script>
+
+</body>
+</html>
+
