@@ -1,0 +1,58 @@
+<html>
+<head>
+    <title>Pendaftaran QA SEGA</title>
+</head>
+<body>
+
+    <center>
+        <img src="logo-sega.jpg" width="200" height="auto" alt="Logo SEGA">
+        <h2>Formulir Rekrutmen QA Tester SEGA</h2>
+        <hr width="50%">
+    </center>
+
+    <form action="" method="post">
+        
+        <fieldset>
+            <legend>Data Diri Pelamar</legend>
+            Nama Lengkap: <br>
+            <input type="text" name="nama" size="40"><br><br>
+
+            Password Akun SEGA: <br>
+            <input type="password" name="password" size="40"><br><br>
+
+            Jenis Kelamin: <br>
+            <input type="radio" name="jk" value="Pria"> Pria
+            <input type="radio" name="jk" value="Wanita"> Wanita<br>
+        </fieldset>
+        <br>
+
+        <fieldset>
+            <legend>Pengalaman Gaming</legend>
+            Console yang lu punya (Bisa pilih lebih dari satu): <br>
+            <input type="checkbox" name="console" value="Genesis"> SEGA Genesis<br>
+            <input type="checkbox" name="console" value="PC"> PC Windows (Steam)<br>
+            <input type="checkbox" name="console" value="PS"> PlayStation 5<br><br>
+
+            Game SEGA Favorit Lu:<br>
+            <select name="game_favorit">
+                <option value="sonic">Sonic the Hedgehog</option>
+                <option value="yakuza">Yakuza / Like a Dragon</option>
+                <option value="persona">Persona</option>
+                <option value="virtua">Virtua Fighter</option>
+            </select>
+            <br><br>
+
+            Ceritain pengalaman lu nemuin bug/glitch pas main game:<br>
+            <textarea name="pengalaman" rows="5" cols="50">Ketik di sini...</textarea>
+        </fieldset>
+        <br>
+
+        <center>
+            <input type="submit" value="Kirim Lamaran">
+            <input type="reset" value="Ulangi Isi Form">
+        </center>
+
+    </form>
+
+</body>
+</html>

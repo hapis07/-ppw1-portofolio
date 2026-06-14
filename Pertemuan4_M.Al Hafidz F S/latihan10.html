@@ -1,0 +1,96 @@
+<html>
+<head>
+    <title>Pendaftaran Kepanitiaan UGM</title>
+</head>
+<body bgcolor="#f4f6f9">
+
+    <center>
+        <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/b/b2/Lambang_UGM.svg/300px-Lambang_UGM.svg.png" width="120" height="120" alt="Logo UGM">
+        <h2>Universitas Gadjah Mada</h2>
+        <h3>Formulir Pendaftaran Panitia PPSMB Palapa</h3>
+    </center>
+    <br>
+
+    <table align="center" width="750" bgcolor="white" cellpadding="20" style="border-radius: 8px; border: 1px solid #ccc;">
+        <tr>
+            <td>
+                <form action="" method="get" oninput="total_jam.value = parseInt(jam_kuliah.value) + parseInt(jam_rapat.value)">
+                    
+                    <p>
+                        <img src="https://cdn-icons-png.flaticon.com/128/3135/3135715.png" width="60" align="right" alt="Ikon Gamada">
+                        <b>Halo, Gamada!</b><br>
+                        Panggilan untuk berkontribusi menyambut Gadjah Mada Muda telah tiba. 
+                        Pastikan semua data di bawah ini diisi dengan benar sebelum menekan tombol kirim.
+                    </p>
+                    <br><hr><br>
+
+                    <fieldset>
+                        <legend>Data Akademik Mahasiswa</legend>
+                        <br>
+                        Nama Lengkap:<br>
+                        <input type="text" name="nama" size="50" placeholder="Nama sesuai KTM"><br><br>
+
+                        Fakultas / Sekolah (Ketik huruf depannya):<br>
+                        <input list="daftar_fakultas" name="fakultas" size="40" placeholder="Contoh: Sekolah Vokasi">
+                        <datalist id="daftar_fakultas">
+                            <option value="Sekolah Vokasi">
+                            <option value="Fakultas Teknik">
+                            <option value="Fakultas MIPA">
+                            <option value="Fakultas Ilmu Budaya">
+                            <option value="Fakultas ISIPOL">
+                        </datalist>
+                        <br><br>
+
+                        Program Studi:<br>
+                        <input type="text" name="prodi" size="50" value="D4 Teknologi Rekayasa Perangkat Lunak"><br><br>
+                    </fieldset>
+                    <br>
+
+                    <fieldset>
+                        <legend>Pilihan Divisi Kepanitiaan</legend>
+                        <br>
+                        Pilih Divisi Pilihan Pertama:<br>
+                        <select name="divisi">
+                            <optgroup label="Divisi Konseptor & Teknis">
+                                <option value="acara">Acara & Materi</option>
+                                <option value="it_pdd">IT & Publikasi (PDD)</option>
+                                <option value="ksk">Kesekretariatan (KSK)</option>
+                            </optgroup>
+                            <optgroup label="Divisi Lapangan">
+                                <option value="cofas">Co-Fasilitator (Pemandu)</option>
+                                <option value="medis">Tim Kesehatan (Medis)</option>
+                                <option value="keamanan">Keamanan & Ketertiban (Kamtib)</option>
+                            </optgroup>
+                        </select>
+                        <br><br>
+                    </fieldset>
+                    <br>
+
+                    <fieldset>
+                        <legend>Kalkulator Komitmen Waktu</legend>
+                        <p>Sebagai panitia, kami perlu mengetahui estimasi kesibukan Anda dalam seminggu:</p>
+                        
+                        Estimasi jam kuliah / praktikum per minggu:<br>
+                        <input type="number" id="jam_kuliah" value="0"> jam <br><br>
+                        
+                        Estimasi jam organisasi / UKM lain per minggu:<br>
+                        <input type="number" id="jam_rapat" value="0"> jam <br><br>
+                        
+                        <b>Total jam sibuk Anda saat ini: <output name="total_jam" for="jam_kuliah jam_rapat">0</output> jam/minggu</b>
+                    </fieldset>
+                    <br><br>
+
+                    <center>
+                        <input type="submit" value="Kirim Berkas Pendaftaran">
+                        &nbsp;&nbsp;
+                        <input type="reset" value="Batalkan">
+                    </center>
+
+                </form>
+            </td>
+        </tr>
+    </table>
+    <br><br>
+
+</body>
+</html>

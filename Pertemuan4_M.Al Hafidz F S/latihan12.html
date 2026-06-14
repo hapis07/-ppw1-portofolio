@@ -1,0 +1,48 @@
+<html>
+<head>
+    <title>Contoh Tag Form Lanjutan</title>
+</head>
+<body>
+    <h2>Pemilihan Karakter & Perhitungan Skor</h2>
+    
+    <form oninput="hasil_skor.value = parseInt(skor_dasar.value) + parseInt(skor_bonus.value)">
+        
+        <fieldset>
+            <legend>Persiapan Loadout Karakter</legend>
+            
+            Pilih atau Ketik Nama Karakter (Misal: ketik 'S'): <br>
+            <input list="daftar_karakter" name="karakter" placeholder="Pilih karakter...">
+            <datalist id="daftar_karakter">
+                <option value="Sonic the Hedgehog">
+                <option value="Kiryu Kazuma">
+                <option value="Joker">
+            </datalist>
+            <br><br>
+
+            Pilih Item Utama: <br>
+            <select name="item">
+                <optgroup label="Senjata">
+                    <option value="pedang">Pedang Katana</option>
+                    <option value="pistol">Pistol Airsoft</option>
+                </optgroup>
+                <optgroup label="Penyembuh">
+                    <option value="ramuan">Ramuan Herbal</option>
+                    <option value="medkit">Medical Kit</option>
+                </optgroup>
+            </select>
+        </fieldset>
+        <br>
+
+        <fieldset>
+            <legend>Kalkulator Skor</legend>
+            Skor Dasar: <br>
+            <input type="number" id="skor_dasar" value="0"> <br>
+            Skor Bonus: <br>
+            <input type="number" id="skor_bonus" value="0"> <br><br>
+            
+            <b>Total Skor yang Didapat: <output name="hasil_skor" for="skor_dasar skor_bonus">0</output></b>
+        </fieldset>
+
+    </form>
+</body>
+</html>

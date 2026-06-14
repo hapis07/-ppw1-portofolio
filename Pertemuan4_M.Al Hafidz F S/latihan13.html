@@ -1,0 +1,37 @@
+<html>
+<head><title>Jawaban Soal 1</title></head>
+<body>
+    <form oninput="hasil.value = parseInt(angka1.value) + parseInt(angka2.value)">
+        
+        <fieldset>
+            <legend>Pemilihan Karakter</legend>
+            Ketik Nama (Contoh: S):<br>
+            <input list="nama_karakter" name="karakter">
+            <datalist id="nama_karakter">
+                <option value="Sonic">
+                <option value="Kiryu Kazuma">
+            </datalist>
+            <br><br>
+
+            Pilih Senjata:<br>
+            <select name="senjata">
+                <optgroup label="Jarak Dekat">
+                    <option value="pedang">Pedang</option>
+                </optgroup>
+                <optgroup label="Jarak Jauh">
+                    <option value="pistol">Pistol</option>
+                </optgroup>
+            </select>
+        </fieldset>
+        <br>
+
+        <fieldset>
+            <legend>Kalkulator Damage (<output>)</legend>
+            Base Damage: <input type="number" id="angka1" value="0"> <br>
+            Bonus Damage: <input type="number" id="angka2" value="0"> <br>
+            Total = <b><output name="hasil" for="angka1 angka2">0</output></b>
+        </fieldset>
+
+    </form>
+</body>
+</html>
